@@ -1,0 +1,17 @@
+// An array of categories
+var categories = ["Lunch", "Dinner", "Sushi", "Drinks", "Desserts"];
+
+// Get the Specials tile element
+var specialsTile = document.getElementById("specials-tile");
+
+// Add a click event listener to the Specials tile
+specialsTile.addEventListener("click", function() {
+  // Generate a random number between 0 and the number of categories
+  var randomIndex = Math.floor(Math.random() * categories.length);
+
+  // Get the random category
+  var randomCategory = categories[randomIndex];
+
+  // Redirect the user to the menu page for the random category
+  window.location.href = "/menu/" + randomCategory;
+});
